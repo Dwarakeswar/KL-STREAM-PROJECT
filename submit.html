@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Upload Video</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand brand-link" href="home.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">CREATOR UPLOAD</div>
+  </a>
+  <nav class="main-nav">
+    <a href="home.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a class="active" href="submit.html">Upload Video</a>
+    <a href="profile.html">Profile</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page narrow">
+  <section class="form-card">
+    <p class="eyebrow">CREATOR MODULE</p>
+    <h1>Upload a Video</h1>
+    <p class="muted">Provide a video link, title, description and category. The administrator reviews it before it appears in the KL Stream catalog.</p>
+
+    <label for="submitTitle">Video title</label>
+    <input id="submitTitle" type="text" placeholder="Enter video title">
+
+    <label for="submitCategory">Category</label>
+    <select id="submitCategory">
+      <option value="">Select category</option>
+      <option>Movies</option><option>TV Shows</option><option>Live Streams</option>
+    </select>
+
+    <label for="submitUrl">Video link</label>
+    <input id="submitUrl" type="url" placeholder="Paste the video link here">
+
+    <label for="submitDescription">Description</label>
+    <textarea id="submitDescription" rows="5" placeholder="Short description"></textarea>
+
+    <button class="btn primary full" onclick="submitVideo()">Send for Admin Approval</button>
+    <p id="submitMessage" class="message"></p>
+  </section>
+
+  <section class="form-card">
+    <div class="section-head compact">
+      <div><p class="eyebrow">YOUR UPLOADS</p><h2>Upload Status</h2></div>
+    </div>
+    <div id="mySubmissions"></div>
+  </section>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

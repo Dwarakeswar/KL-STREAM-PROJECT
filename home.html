@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand brand-link" href="home.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">WATCH • DISCOVER • SAVE</div>
+  </a>
+  <nav class="main-nav">
+    <a class="active" href="home.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="submit.html">Upload Video</a>
+    <a href="profile.html">Profile</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="hero-banner">
+    <div>
+      <p class="eyebrow light">KL STREAM</p>
+      <h1>Entertainment and knowledge, in one place.</h1>
+      <p>Browse movies, TV shows and live streams. Build your watchlist and discover content you’ll enjoy.</p>
+      <div class="hero-actions">
+        <a class="btn light-btn" href="#catalog">Browse Content</a>
+        <a class="btn outline-light" href="submit.html">Upload Video</a>
+      </div>
+    </div>
+    <div class="hero-stat">
+      <strong id="heroVideoCount">22+</strong>
+      <span>videos available</span>
+    </div>
+  </section>
+
+  <section class="section-head" id="catalog">
+    <div>
+      <p class="eyebrow">CATALOG</p>
+      <h2>Explore Content</h2>
+    </div>
+    <div class="top-bar">
+      <input id="searchInput" type="search" placeholder="Search title or description..." oninput="displayVideos()">
+      <select id="categoryFilter" onchange="displayVideos()">
+        <option value="All">All Categories</option>
+        <option>Movies</option>
+        <option>TV Shows</option>
+        <option>Live Streams</option>
+      </select>
+    </div>
+  </section>
+
+  <div id="videoList" class="video-grid"></div>
+
+  <section class="section-head recommendation-head">
+    <div>
+      <p class="eyebrow">PERSONALIZED</p>
+      <h2>Recommended For You</h2>
+    </div>
+    <p class="muted">Based on your watchlist and viewing history.</p>
+  </section>
+  <div id="recommendationList" class="video-grid"></div>
+
+  <section class="promo-grid">
+    <article class="promo-card">
+      <p class="eyebrow">PRO PLAN</p>
+      <h2>Upgrade your experience</h2>
+      <p>Activate KL Stream Pro instantly for the project demonstration. No real payment is required.</p>
+      <a href="profile.html#subscription" class="btn primary">View Pro Plan</a>
+    </article>
+    <article class="promo-card">
+      <p class="eyebrow">CREATORS</p>
+      <h2>Share your content</h2>
+      <p>Upload a video link with its title, description and category. Admin approval publishes it to KL Stream.</p>
+      <a href="submit.html" class="btn secondary">Upload Content</a>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

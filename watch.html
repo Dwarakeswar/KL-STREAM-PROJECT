@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Watch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand brand-link" href="home.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">VIDEO PLAYER</div>
+  </a>
+  <nav class="main-nav">
+    <a href="home.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="submit.html">Upload Video</a>
+    <a href="profile.html">Profile</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page">
+  <button class="back-button" onclick="goHome()">← Back to Home</button>
+  <section class="watch-layout">
+    <div class="player-box">
+      <iframe id="videoPlayer" src="" title="KL Stream Video Player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <aside class="watch-info">
+      <span id="watchCategory" class="badge">Video</span>
+      <h1 id="watchTitle">Loading...</h1>
+      <p id="watchDescription" class="muted"></p>
+      <div class="watch-actions">
+        <button id="watchlistButton" class="btn primary" onclick="toggleCurrentWatchlist()">Add to Watchlist</button>
+        <a id="youtubeLink" class="btn secondary" href="#" target="_blank" rel="noopener">Open Video Source</a>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+<header class="site-header">
+  <a class="brand brand-link" href="index.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">VIDEO STREAMING PLATFORM</div>
+  </a>
+</header>
+
+<main class="auth-main">
+  <section id="loginSection" class="auth-box">
+    <div class="auth-logo">KL<span>STREAM</span></div>
+    <p class="eyebrow">WELCOME BACK</p>
+    <h1>Sign in to continue</h1>
+    <p class="muted">Watch, save and discover content on KL Stream.</p>
+
+    <label for="loginEmail">Email</label>
+    <input id="loginEmail" type="email" autocomplete="email" placeholder="you@example.com">
+
+    <label for="loginPassword">Password</label>
+    <input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter password">
+
+    <button class="btn primary full" onclick="login()">Login</button>
+    <button class="link-button" onclick="forgotPassword()">Forgot password?</button>
+
+    <p id="loginMessage" class="message"></p>
+    <p class="auth-switch">New to KL Stream? <button class="inline-link" onclick="showSignup()">Create an account</button></p>
+  </section>
+
+  <section id="signupSection" class="auth-box hidden">
+    <div class="auth-logo">KL<span>STREAM</span></div>
+    <p class="eyebrow">GET STARTED</p>
+    <h1>Create your account</h1>
+    <p class="muted">Your login account is securely handled by Firebase Authentication. Your project data stays in this browser for now.</p>
+
+    <label for="signupName">Full name</label>
+    <input id="signupName" type="text" autocomplete="name" placeholder="Your name">
+
+    <label for="signupEmail">Email</label>
+    <input id="signupEmail" type="email" autocomplete="email" placeholder="you@example.com">
+
+    <label for="signupPassword">Password</label>
+    <input id="signupPassword" type="password" autocomplete="new-password" placeholder="At least 6 characters">
+
+    <button class="btn primary full" onclick="signup()">Create Account</button>
+    <p id="signupMessage" class="message"></p>
+    <p class="auth-switch">Already have an account? <button class="inline-link" onclick="showLogin()">Login</button></p>
+  </section>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

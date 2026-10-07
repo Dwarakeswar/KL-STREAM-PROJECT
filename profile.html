@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand brand-link" href="home.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">ACCOUNT & SETTINGS</div>
+  </a>
+  <nav class="main-nav">
+    <a href="home.html">Home</a>
+    <a href="watchlist.html">Watchlist</a>
+    <a href="submit.html">Upload Video</a>
+    <a class="active" href="profile.html">Profile</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="page-title">
+    <p class="eyebrow">ACCOUNT</p>
+    <h1 id="profileName">My Profile</h1>
+    <p id="profileEmail" class="muted"></p>
+  </section>
+
+  <div class="settings-grid">
+    <section class="form-card" id="subscription">
+      <p class="eyebrow">SUBSCRIPTION</p>
+      <h2>KL Stream Pro</h2>
+      <div class="price">₹199 <span>/ month</span></div>
+      <ul class="feature-list">
+        <li>Ad-free project experience</li>
+        <li>Premium content badge</li>
+        <li>Enhanced recommendations</li>
+        <li>Priority creator uploads</li>
+      </ul>
+      <p id="subscriptionStatus" class="status-pill">Subscription: Not Active</p>
+      <button id="subscribeButton" class="btn primary full" onclick="subscribeUser()">Subscribe to Pro</button>
+      <p class="small muted">Demo payment: no real transaction is performed.</p>
+    </section>
+
+    <section class="form-card">
+      <p class="eyebrow">PARENTAL CONTROLS</p>
+      <h2>Content Protection</h2>
+      <p class="muted">When enabled, every attempt to watch a video requires the 4-digit PIN. The PIN is the key that unlocks viewing.</p>
+      <label for="parentalPin">4-digit parental PIN</label>
+      <input id="parentalPin" type="password" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off">
+      <div class="button-stack">
+        <button class="btn secondary full" onclick="setParentalControl()">Enable / Update PIN</button>
+        <button id="unlockParentalButton" class="btn primary full" onclick="unlockParentalControl()">Unlock Viewing Session</button>
+        <button id="disableParentalButton" class="btn danger full" onclick="disableParentalControl()">Disable Parental Control</button>
+      </div>
+      <p id="parentalStatus" class="status-pill">Parental Control: Disabled</p>
+      <p id="parentalMessage" class="small muted">If protection is enabled, knowing the PIN is required to watch videos.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

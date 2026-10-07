@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">ADMINISTRATION</div>
+  </div>
+  <nav class="main-nav">
+    <a class="active" href="admin.html">Dashboard</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="admin-hero">
+    <div>
+      <p class="eyebrow light">ADMIN MODULE</p>
+      <h1>Platform Dashboard</h1>
+      <p>Manage creator uploads, catalog content and local project users.</p>
+    </div>
+    <div class="admin-badge">ADMIN</div>
+  </section>
+
+  <section class="stats-grid">
+    <article class="stat-card"><span>Total Users</span><strong id="statUsers">0</strong></article>
+    <article class="stat-card"><span>Published Videos</span><strong id="statVideos">0</strong></article>
+    <article class="stat-card"><span>Pending Uploads</span><strong id="statPending">0</strong></article>
+    <article class="stat-card"><span>Pro Subscribers</span><strong id="statSubscribers">0</strong></article>
+  </section>
+
+  <section class="admin-panel">
+    <div class="section-head compact">
+      <div><p class="eyebrow">CREATOR CONTENT</p><h2>Pending Uploads</h2></div>
+    </div>
+    <div id="submissionList"></div>
+  </section>
+
+  <section class="admin-panel">
+    <div class="section-head compact">
+      <div><p class="eyebrow">CONTENT MANAGEMENT</p><h2>Published Videos</h2></div>
+      <input id="adminSearch" type="search" placeholder="Search videos..." oninput="displayAdminVideos()">
+    </div>
+    <div id="adminVideoList"></div>
+  </section>
+
+  <section class="admin-panel">
+    <div class="section-head compact">
+      <div><p class="eyebrow">USER MANAGEMENT</p><h2>Registered Users</h2></div>
+    </div>
+    <div class="notice-box">Project profile data is stored in this browser for now. Authentication accounts and passwords are managed by Firebase Authentication.</div>
+    <div id="adminUserList"></div>
+  </section>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>

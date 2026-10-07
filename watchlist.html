@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KL Stream | Watchlist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand brand-link" href="home.html">
+    <div class="brand-name">KL STREAM</div>
+    <div class="brand-subtitle">MY LIBRARY</div>
+  </a>
+  <nav class="main-nav">
+    <a href="home.html">Home</a>
+    <a class="active" href="watchlist.html">Watchlist</a>
+    <a href="submit.html">Upload Video</a>
+    <a href="profile.html">Profile</a>
+    <button class="nav-button" onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="page-title">
+    <p class="eyebrow">YOUR LIBRARY</p>
+    <h1>My Watchlist</h1>
+    <p>Save videos you want to watch later.</p>
+  </section>
+  <div id="watchlist" class="video-grid"></div>
+</main>
+
+<footer class="site-footer">KL STREAM</footer>
+<script type="module" src="script.js"></script>
+</body>
+</html>
